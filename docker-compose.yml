@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    build:
+      context: ./docker/app
+      dockerfile: Dockerfile
+      args:
+        IMAGE_URL: "https://dl.dropboxusercontent.com/s/d2sx0wjheb7dk0p/example_batch.jpg"
+    volumes:
+      - ./:/app
+      - /tmp:/tmp
